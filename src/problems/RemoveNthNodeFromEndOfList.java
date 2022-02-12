@@ -59,7 +59,6 @@ We relink the next pointer of the node referenced by the second pointer to point
         second.next = second.next.next;
         return dummy.next;
     }
-
 }
 /*
 Example 1:

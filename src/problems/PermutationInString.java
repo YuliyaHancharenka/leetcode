@@ -58,8 +58,7 @@ Thus, we can update the hashmap by just updating the indices associated with tho
 Again, for every updated hashmap, we compare all the elements of the hashmap for equality to get the required result.
      */
     private static boolean checkInclusionSlidingWindow(String s1, String s2) {
-        if (s1.length() > s2.length())
-            return false;
+        if (s1.length() > s2.length()) return false;
         int[] s1map = new int[26];
         int[] s2map = new int[26];
         for (int i = 0; i < s1.length(); i++) {
@@ -67,8 +66,7 @@ Again, for every updated hashmap, we compare all the elements of the hashmap for
             s2map[s2.charAt(i) - 'a']++;
         }
         for (int i = 0; i < s2.length() - s1.length(); i++) {
-            if (matches(s1map, s2map))
-                return true;
+            if (matches(s1map, s2map)) return true;
             s2map[s2.charAt(i + s1.length()) - 'a']++;
             s2map[s2.charAt(i) - 'a']--;
         }
